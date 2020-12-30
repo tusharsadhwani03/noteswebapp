@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/log.css">
+    <title>Notes</title>
+</head>
+<body>
+
+<!-- Header of page  -->
+  <div class="header">
+    <div class="title">
+      <h1>NOTES</h1> 
+    </div>
+    <div class="links">
+      <a href="/"><h2>HOME</h2></a>
+      <a href="/log"><h2>LOGIN / SIGUNP</h2></a>
+    </div>
+  </div>
+
+<!-- Body of page (login , signup forms)  -->
+  <div class="container">
+    <div class = "login">
+      <h1>Login</h1>
+      <button type="submit">Sign In via Google</button>
+      <h3 class="span">OR</h3>
+      <form action="/login" method="POST" class="login_form">
+        <input type="text" name="email" class="text" placeholder="Enter your email address">
+        <div class="emailError"></div>
+        <input type="password" name="password" class="text" placeholder="Enter Password">
+        <div class="passError"></div>
+        <input type="submit" name="submit" class="login_btn"  value = "LOGIN">
+      </form>
+    </div>
+
+    <div class = "go_for_signup">
+      <p>Hello my Friend</p>
+      <p>SignUp and start creating notes</p>
+      <button type="submit" class="go_to_signup">SignUp</button>
+      </div>
+    
+    
+    <div class = "signup">
+      <h1>SignUp</h1>
+      <form action="/signup" method="POST" class="signup_form">
+        <input type="text" name="username" class="text" placeholder="Enter your username">
+        <div class="usererror"></div>
+        <input type="text" name="email" class="text" placeholder="Enter your email address">
+        <div class="emailerror"></div>
+        <input type="password" name="password" class="text" placeholder="Choose Password">
+        <div class="passerror"></div>
+        <input type="submit" name="submit" class="signup_btn"  value = "SignUp">
+      </form>
+    </div>
+
+    <div class = "go_for_login">
+      <p>Welcome Back</p>
+      <p>View your notes and create new ones</p>
+      <button class="go_to_login">Login</button>
+    </div>
+
+  </div>
+  <!-- frontend js -->
+  <script src="/frontend_js/log_slide.js"></script>
+</body>
+</html>

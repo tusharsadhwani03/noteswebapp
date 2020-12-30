@@ -1,0 +1,204 @@
+body{
+    margin: 0em;
+    background-color : lightgray;
+   
+}
+/* Styling Header Section of page */
+.header
+{
+ width: 100%;
+ display: grid;
+ grid-template-columns: 1.5fr 1fr;
+ height: 15vh;
+ background-color: #141e30;
+ color :#F2AA4CFF;
+ border-bottom: 5px solid #F2AA4CFF;
+}
+.title{
+    margin: auto;
+    margin-left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.links{
+    margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+}
+.links a{
+ text-decoration: none;
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+}
+
+/********************* Styling login and signup forms ************/
+.container{
+    box-sizing: border-box;
+    width: 50%;
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* login form*/
+.login , .signup {
+    overflow: hidden;
+    height: 50vh;
+    background-color:#ffE5D8;
+    color:#243b55;
+    width: 100%;
+    text-align: center;
+    border : 1px solid transparent;
+    border-radius: 5%;
+    margin: auto;
+}
+.login h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login h3{
+    margin-bottom: -25px;
+}
+.login_form{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.text{
+    background-color: transparent;
+    font-family: cursive;
+    font-weight: 800;
+    outline: none;
+    margin: auto;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    width: 60%;
+    height: 5vh;
+    margin-bottom: 5vh;
+}
+.login_btn, .signup_btn{
+    margin: auto;
+    width: 30%;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 5%;
+    color: #243b55;
+    font-weight: 800;
+    background-color: #F2AA4CFF;
+    margin-bottom: 5vh;
+}
+
+.go_for_signup , .go_for_login{
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+    height: 50vh;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 5%;
+    color: #F2AA4CFF;
+    background-image: linear-gradient(to right ,#141e30 ,#243b55);
+}
+.go_for_signup p, .go_for_login p{
+ margin-top: 50px;
+}
+.go_to_signup , .go_to_login{
+    outline: none;
+    margin: auto;
+    width: 30%;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 5%;
+    color: #243b55;
+    font-weight: 800;
+    background-color: #F2AA4CFF;
+    margin-top: 25px;
+}
+.signup_form{
+    display: grid;
+    grid-template-rows: 1fr;
+    border-radius: 5%;
+    /*background-image: linear-gradient(to right , #ff4b2b , #ff416c);*/
+}
+
+.login{
+    position: relative;
+    z-index: 4;
+    grid-column: 1/2;
+    grid-row: 1;
+}
+.go_for_signup{
+    position: relative;
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 2/3;
+}
+.go_for_login{
+    z-index: 1;
+    position: relative;
+    grid-row: 1;
+    grid-column: 2/3;
+}
+.signup{
+    position: relative;
+    z-index: 3;
+    grid-column: 1/2;
+    grid-row: 1
+}
+
+.slide_right{
+    animation-name: slideright;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+@keyframes slideright{
+    0%  {left: 0px; top: 0px; z-index: 3;}
+    99% {left: 99%; top: 0px;
+    z-index: 3;}
+    100% {left: 100%; top: 0px; z-index: 6;}
+}
+
+.slide_left{
+    position: relative;
+    animation-name: slideleft;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    
+}
+@keyframes slideleft{
+    0%  {right: 0px; top: 0px;z-index: 5;}
+    100% {right: 100%; top: 0px; z-index: 5;}
+}
+
+.return_left{
+    position: relative;
+    animation-name: returnleft;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+@keyframes returnleft{
+    0% {right: 0px; top: 0px; z-index: 3;}
+    50%{right: 100%;top: 0px;}
+    100%{
+        right: 0%; top: 0px; z-index: 7;
+    }
+}
+.return_right{
+    position: relative;
+    animation-name: returnright;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+@keyframes returnright{
+    0% {right: 0px; top: 0px; z-index: 3;}
+    50%{right: -100%;top: 0px;}
+    100%{
+        right: 0%; top: 0px; z-index: 8;
+    }
+}
