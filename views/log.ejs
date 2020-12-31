@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/log.css">
-    <title>Notes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Oleo+Script:wght@700&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet"><title>Notes</title>
 </head>
 <body>
 
@@ -38,17 +39,16 @@
       <p>Hello my Friend</p>
       <p>SignUp and start creating notes</p>
       <button type="submit" class="go_to_signup">SignUp</button>
-      </div>
-    
+    </div>
     
     <div class = "signup">
       <h1>SignUp</h1>
       <form action="/signup" method="POST" class="signup_form">
-        <input type="text" name="username" class="text" placeholder="Enter your username">
+        <input type="text" name="username" class="text" name = "username" placeholder="Enter your username">
         <div class="usererror"></div>
-        <input type="text" name="email" class="text" placeholder="Enter your email address">
+        <input type="text" name="email" class="text" name = "email" placeholder="Enter your email address">
         <div class="emailerror"></div>
-        <input type="password" name="password" class="text" placeholder="Choose Password">
+        <input type="password" name="password" class="text" name = "password" placeholder="Choose Password">
         <div class="passerror"></div>
         <input type="submit" name="submit" class="signup_btn"  value = "SignUp">
       </form>
@@ -61,7 +61,10 @@
     </div>
 
   </div>
-  <!-- frontend js -->
+  <!-- frontend js for animation -->
   <script src="/frontend_js/log_slide.js"></script>
+
+  <!-- validation -->
+  <script src = "/frontend_js/dom_manipulate.js"></script>
 </body>
 </html>

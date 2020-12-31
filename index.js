@@ -1,13 +1,13 @@
 /* Importing required modules */
-    const express = require('express');
-    const ejs = require('ejs');
-    const mongoose = require('mongoose');
-    const bodyparser = require('body-parser');
-    const router = require('./routes');
+    var express = require('express');
+    var ejs = require('ejs');
+    var mongoose = require('mongoose');
+    var bodyparser = require('body-parser');
+    var router = require('./routes');
 
 /* Init express , enable static content , setting the view engine */
     // 1. Init express in variable 'app'
-        const app = express();
+        var app = express();
 
     // 2. Let's bring static content in action
         app.use(express.static('public'));
@@ -17,7 +17,7 @@
 
 /* Setting mongoose */
     // 1. Connect to the database
-        mongoose.connect("mongodb://127.0.0.1:27017/test",{useNewUrlParser : true , useUnifiedTopology : true});
+        mongoose.connect("mongodb+srv://tushar:tush03ar@mycluster.rys9d.mongodb.net/test",{useNewUrlParser : true , useUnifiedTopology : true});
 
 /* Middlewares */
     // 1. Body parser
