@@ -5,6 +5,7 @@
     var bodyparser = require('body-parser');
     var router = require('./routes');
     var cookieparser = require('cookie-parser');
+    var keys = require('./keys/keys');
 
 /* Init express , enable static content , setting the view engine */
     // 1. Init express in variable 'app'
@@ -19,7 +20,7 @@
 
 /* Setting mongoose */
     // 1. Connect to the database
-        mongoose.connect("mongodb+srv://tushar:tush03ar@mycluster.rys9d.mongodb.net/test",{useNewUrlParser : true , useUnifiedTopology : true});
+        mongoose.connect(keys.mongodb.key,{useNewUrlParser : true , useUnifiedTopology : true});
 
 /* Middlewares */
     // 1. Body parser

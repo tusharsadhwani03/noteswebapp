@@ -1,5 +1,5 @@
 /* Import required modules */
-    var keys = require('./keys');
+    var keys = require('./keys/keys');
     const jwt  = require('jsonwebtoken');
     const User = require('./model/notes_model');
     

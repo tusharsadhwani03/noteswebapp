@@ -3,7 +3,7 @@
     var routes = express.Router();
     var bodyparser = require('body-parser');
     var User = require('./model/notes_model');
-    var secretcookie = require('./keys');
+    var secretcookie = require('./keys/keys');
     var jwt = require('jsonwebtoken');
     var {authuser , logauth ,delcookie,logfirst} = require('./middleware');
 
