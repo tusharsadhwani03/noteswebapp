@@ -4,10 +4,12 @@
     var mongoose = require('mongoose');
     var bodyparser = require('body-parser');
     var router = require('./routes');
+    var cookieparser = require('cookie-parser');
 
 /* Init express , enable static content , setting the view engine */
     // 1. Init express in variable 'app'
         var app = express();
+        app.use(cookieparser());
 
     // 2. Let's bring static content in action
         app.use(express.static('public'));
@@ -27,6 +29,8 @@
     // 2. For routing -> handling get and post requests
         app.use(router);
 
+    // 3. Cookie-Parser
+            
 /* Setting the server */
     // 1. Set port
         const port = 3000;

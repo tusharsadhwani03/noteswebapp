@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/note.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Oleo+Script:wght@700&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/note.css">
+    <title>Notes</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="title">
+            <h1>NOTES</h1>
+        </div>
+        <div class="username">
+           <% if(user) { %>
+            <form class = "user">
+            <input type="hidden" name = "uservalue"  value="<%= user.username %>">
+            </form>
+            Welcome  <u>'<%= user.username %>'</u>
+           <% } %> 
+        </div>
+        <div class="btns">
+            <button type="submit" class="newnote  headerbtn">+ New Note</button>
+        
+            <button type="submit" class="mynote headerbtn">My Notes</button>
+        
+            <button type="submit" class="logout headerbtn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Body Section -->
+
+    <div class="note">
+        <canvas class="notes" style="border: 1px solid transparent; border-radius: 5%; background-color: bisque; height: 60vh; width: 50%;"></canvas>
+        <div class = "option">
+            <button type="submit" class="savenote optionbtn">SAVE</button>
+            <button type="submit" class="cancelnote optionbtn">CANCEL</button>
+        </div> 
+     </div>
+    <canvas class="notecopy" style="border: 1px solid transparent; border-radius: 5%; background-color: bisque; height: 60vh; width: 50%; opacity: 0; z-index: -4; position: absolute; top: 25%;"></canvas>
+   
+    <div class="choosefont">
+        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 40px;   backdrop-filter: blur(4px); margin-bottom: 0%;">Choose Font</h1>
+        <button type="submit" class="Arial" value="Arial" style="font-family: Arial, Helvetica, sans-serif;">Arial</button>
+        <button type="submit" class="Pacifico" value="Pacifico" style="font-family: Pacifico,cursive">Pacifico</button>
+        <button type="submit" class="OleoScript" value="Oleo Script" style="font-family: Oleo Script,cursive;">OleoScript</button>
+        <button type="submit" class="Fantasy" value="YellowTail" style="font-family: fantasy;">fantasy</button>
+        <button type="submit" class="cursive" value="cursive" style="font-family: cursive;">cursive</button>
+    </div>
+
+    <div class="nameandcolor">
+        <h1 style="font-family: Pacifico,cursive; font-size: 20px;  margin-bottom: 0%;">Note Name</h1>
+        <form class = "notename">
+            <input type="text" value="NOTE 1" class="name">
+        </form>
+        <h1 style="font-family: Pacifico,cursive; font-size: 20px;  margin-top: 0%; margin-bottom: 0%;">Choose Font Color</h1>
+        <form class = "color">
+            <input type="color" value='#141e30' class="colorname">
+            <button type="submit" class="colorpicker">OK</button>
+        </form>          
+    </div>
+    
+<!--
+      
+-->
+    <script src="/frontend_js/note.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body{
+    margin: 0%;
+    background : url('/images/pexels-ann-h-1762851.jpg') no-repeat center center scroll; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 100vh;
+}   
+.header{
+    z-index: 4;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: row;
+    height: 18vh;
+    color :#F2AA4CFF;
+    border-bottom: 5px solid  #141e30;
+    margin: 0px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+}
+.title{
+    margin:auto;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+    font-size: 35px;
+    color:#141e30;
+}
+.userhead{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+    font-size: 40px;
+}
+.username{
+    margin-top: 1%;
+    width: 100%;
+    color:  #141e30;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+    font-size: 30px;
+}
+.btns{
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.newnote , .logout , .mynote 
+{
+    width: 25%;
+    margin: auto;
+    border-radius: 1em;
+    outline: none;
+    height: 30%;
+    overflow: hidden;
+    border: 1px solid transparent;
+    color: #243b55;
+    background-color: #F2AA4CFF;
+    font-size: 15px;
+    font-family: 'Oleo Script' , cursive;
+}
+.container{
+    width : 100%;
+    margin-top: 20vh;
+    display : flex;
+    flex-direction:column; 
+}
+.notes{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.note{
+    width : 50% ; 
+    margin: auto; 
+    margin-top: 20vh;
+    background-color: #141e30;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border: 1px solid transparent;
+    border-radius: 5em;
+}
+.information{
+    text-align: center;
+    width:100%;
+    backdrop-filter: blur(8px);
+}
+.deletebtn{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+}
+.Title, .date 
+{
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    font-family: "Pacifico",cursive;
+    font-size: 20px;
+    color: #F2AA4CFF;
+}
+.delete{
+    width: 100%;
+    height: 100%;
+    color: #F2AA4CFF;
+    background: transparent;
+    border: transparent;
+    outline: none;
+}
+
+.headerbtn:hover{
+    transform-origin: right;
+    transform: rotate(10deg) scale(1.2);
+    border: solid;
+}
+
+.animate{
+    animation: leave 1s forwards;
+}
+@keyframes leave{
+    0%{position: relative; top: 0%; left: 0%;transform: scale(1);}
+    30%{position: relative; top: 0%; left: 0%; transform: scale(0.4);background-color: aqua;}
+    100%{position: relative; top: 0%; left: -500px; transform: scale(0.4);}
+}

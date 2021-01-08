@@ -1,0 +1,256 @@
+body{
+    margin: 0%;
+    background : url('/images/pexels-min-an-1629212.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+}   
+.header{
+    backdrop-filter: blur(12px);
+     width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    background-color: transparent;
+    color :#F2AA4CFF;
+    border-bottom: 3px solid #F2AA4CFF;
+    margin: 0px;
+    overflow: hidden;
+}
+.title{
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+    font-size: 18px;
+}
+.username{
+    width: 50%;
+    margin:auto;
+    text-align: center;
+    font-family: 'Pacifico',cursive;
+    font-size: 35px;
+}
+.btns{
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.newnote , .logout , .mynote 
+{
+    width: 25%;
+    margin: auto;
+    border-radius: 1em;
+    outline: none;
+    height: 30%;
+    overflow: hidden;
+    border: 1px solid transparent;
+    color: #243b55;
+    background-color: #F2AA4CFF;
+    font-size: 15px;
+    font-family: 'Oleo Script' , cursive;
+}
+.container{
+    width: 100%;
+}
+.note{
+    width:100%;
+    height: 100vh;
+    text-align: center;
+    opacity: 0;
+}
+.option{
+    margin: auto;
+    margin-top: 1%;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+}
+
+.savenote , .cancelnote{
+    width: 10%;
+    margin: auto;
+    outline: none;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    color: #243b55;
+    background-color: #F2AA4CFF;
+    font-size: 15px;
+    font-family: 'Oleo Script' , cursive;
+}
+.optionbtn:hover{
+    transform-origin: center;
+    transform: scale(1.2);
+}
+.headerbtn:hover{
+    transform-origin: right;
+    transform: rotate(10deg) scale(1.2);
+}
+.animate{
+    position: absolute;
+    animation-name: test;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes test{
+    0%{top : -500px ; opacity: 0; transform: scale(0.9);}
+    70%{top : 30% ;transform: scale(0.6); }
+    100%{top : 25% ; opacity: 1;  transform: scale(1);}
+}
+.down{
+    position: absolute;
+    animation-name: test2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes test2{
+    0%{top : 0px ; opacity: 1;transform: scale(0.9); }
+    70%{top : 30% ;transform: scale(0.6); }
+    100%{top : 100% ; opacity: 1;  transform: scale(0.6); }
+}
+
+.choosefont{
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    width: 20%;
+    color: #F2AA4CFF;
+    display: flex;
+    height: 42vh;
+    flex-direction: column;
+}
+.Arial , .Pacifico , .Fantasy, .cursive , .OleoScript{
+    backdrop-filter: blur(8px);
+    width: 80%;
+    background-color: transparent;
+    color :#F2AA4CFF;
+    margin: auto;
+    height: 40%;
+    font-size: 20px;
+    border: transparent;
+    outline: none;
+}
+.toright{
+    animation: right 0.5s forwards;
+}
+@keyframes right{
+    0%{left: -400px;opacity: 0;backdrop-filter: blur(0px);}
+    100%{left: 0%; opacity: 1; backdrop-filter: blur(8px);}
+}
+.toleft{
+    animation-name: left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes left{
+    0%{position: absolute; left: 0px;opacity: 1;}
+    100%{position: absolute; left: -400px;opacity: 0;}
+}
+
+button:hover{
+    transform: scale(1.2);
+    border: solid;
+}
+.selected{
+    transform: scale(1.2);
+    border: solid;
+}
+
+.nameandcolor{
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 35%;
+    width: 20%;
+    color: #F2AA4CFF;
+    display: flex;
+    height: 42vh;
+    background: transparent;
+    flex-direction: column;
+}
+.notename{
+    width: 100%;
+    color :#F2AA4CFF;
+    margin-bottom: 10%;
+    height: 20%;
+    font-size: 20px;
+    border: transparent;
+    outline: none;
+    margin-top: 0%;
+}
+.name{
+    width: 100%;
+    color :#F2AA4CFF;
+    margin: auto;
+    height: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: solid;
+    outline: none;
+}
+.color{
+width: 100%;
+height: 20%;
+}
+.colorname{
+    width: 100%;
+    color :#F2AA4CFF;
+    margin: auto;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    height: 100%;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    border: transparent;
+}
+.colorpicker{
+    border: transparent;
+    width: 40%;
+    background: #F2AA4CFF;
+    color: #141e30;
+    margin: auto;
+    font-weight: 900;
+    margin-top: 5%;
+    border-radius: 5em;
+    height: 30px;
+    outline: none;
+}
+
+.right{
+    animation: toright 0.5s forwards;
+}
+@keyframes toright{
+    0%{right:  0px;opacity: 1;}
+    100%{right: -400px; opacity: 0;}
+}
+.left{
+    animation-name: toleft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes toleft{
+    0%{position: absolute; right: -400px;opacity: 0;backdrop-filter: blur(0px);}
+    100%{position: absolute; right: 0px;opacity: 1;backdrop-filter: blur(8px);}
+}
+
+.load{
+    animation-name: onload;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes onload{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

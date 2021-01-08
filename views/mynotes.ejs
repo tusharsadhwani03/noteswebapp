@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mynote.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Oleo+Script:wght@700&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--Header Section-->
+    <div class="header">
+    <div class="title">NOTES</div>
+    <div class="userhead">
+    <div class="username">
+        <% if(user) { %>
+         Welcome  <u>'<%= user.username %>'</u>
+        <% } %> 
+     </div>
+     <div class="heading" style="width: 100%;  text-align: center;">
+        <h1 style="font-size: 30px; font-family: Pacifico; color:  #141e30;">My Notes</h1>
+     </div> 
+    </div>
+     <div class="btns">
+        <button type="submit" class="newnote  headerbtn">Add Notes</button>
+    
+        <button type="submit" class="logout headerbtn">Logout</button>
+    </div>
+    </div>
+    <div class = "container">
+        <div class="notes">
+        <% if(user) { %>
+            <% user.notes.forEach(note => { %>
+                <div class="note">
+                    <div class="image">
+                        <img src="<%= note.imagedata %>" alt="" width="100%" height="100%" style="object-fit:fill;">
+                    </div>
+                    <div class="information">
+                        <form class = "user">
+                            <input type="hidden" name = "uservalue"  value="<%= user.username %>">
+                            <input type="hidden" name = "noteid" value="<%= note.imagedata %>">
+                        </form>
+                    <h1 class="Title"><%= note.Title %> </h1>
+                    <h1 class="date"><%= note.Date %></h1>
+                    </div>
+                    <div class="deletebtn">    
+                    <button class="delete">DELETE</button>
+                    </div>
+                </div>
+            <% }) %>
+        <% } %>
+        </div>
+    </div>
+    <script src="/frontend_js/mynote.js"></script>
+    </body>
+</html>

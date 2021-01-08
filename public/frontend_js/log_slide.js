@@ -1,3 +1,9 @@
+/* Grab the containers */
+const container = document.querySelector('.container');
+window.onload = function(){
+    container.classList.add('load');
+};
+
 /* Grab the buttons */
 const gotosignup = document.querySelector('.go_to_signup');
 const gotologin = document.querySelector('.go_to_login');
