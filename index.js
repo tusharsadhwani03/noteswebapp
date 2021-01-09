@@ -31,7 +31,7 @@
             
 /* Setting the server */
     // 1. Set port
-        const port = 3000 || process.env.PORT;
+        const port = process.env.PORT || 3000;
 
     // 2. Listen to the port
         app.listen(port,function(){
