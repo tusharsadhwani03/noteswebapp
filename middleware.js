@@ -32,7 +32,7 @@
         var token = req.cookies.jwt;
         if (token)
         {
-            jwt.verify(token,keys.cookiesecret.secret, async (err, decodedToken) => {
+            jwt.verify(token,process.env.cookiesecret, async (err, decodedToken) => {
                 if (err)
                 {
                     next();
@@ -58,7 +58,7 @@
         var token = req.cookies.jwt;
         if(token)
         {
-            jwt.verify(token,keys.cookiesecret.secret,async (err,decodedToken) => {
+            jwt.verify(token,process.env.cookiesecret,async (err,decodedToken) => {
                 if(err)
                 {
                     res.redirect('/log');
