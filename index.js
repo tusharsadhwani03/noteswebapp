@@ -29,12 +29,10 @@
     
     // 2. For routing -> handling get and post requests
         app.use(router);
-
-    // 3. Cookie-Parser
             
 /* Setting the server */
     // 1. Set port
-        const port = 3000;
+        const port = 3000 || process.env.PORT;
 
     // 2. Listen to the port
         app.listen(3000,function(){
