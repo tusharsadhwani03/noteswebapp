@@ -29,7 +29,7 @@ gotologin.addEventListener('click', (e)=>{
     e.preventDefault();
     login.classList.add('return_left');
     goforsignup.classList.add('return_right');
-   setTimeout(() => {
+    setTimeout(() => {
         location.assign('/log');
     }, 2000);
 });

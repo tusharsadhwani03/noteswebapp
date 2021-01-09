@@ -15,8 +15,8 @@
       <h1>NOTES</h1> 
     </div>
     <div class="links">
-      <a href="/"><h2>HOME</h2></a>
-      <a href="/log"><h2>LOGIN / SIGUNP</h2></a>
+      <a href="/" class="notcurrent"><h2>HOME</h2></a>
+      <a href="/log" class="current"><h2>LOGIN / SIGUNP</h2></a>
     </div>
   </div>
 
@@ -24,8 +24,6 @@
   <div class="container">
     <div class = "login">
       <h1>Login</h1>
-      <button type="submit">Sign In via Google</button>
-      <h3 class="span">OR</h3>
       <form action="/login" method="POST" class="login_form">
         <input type="text" name="email" class="text" placeholder="Enter your email address">
         <div class="emailError"></div>

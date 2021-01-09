@@ -8,6 +8,10 @@ body{
     box-sizing: border-box;
     overflow: hidden;
 }   
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
 .header{
     backdrop-filter: blur(12px);
      width: 100%;
@@ -59,9 +63,26 @@ body{
 }
 .note{
     width:100%;
-    height: 100vh;
     text-align: center;
     opacity: 0;
+}
+.notes{
+    border: 1px solid transparent;
+    border-radius: 5%; 
+    background-color: bisque;
+    height: 60vh;
+     width: 50%;
+}
+.notecopy{
+    border: 1px solid transparent;
+    border-radius: 5%; 
+    background-color: bisque; 
+    height: 60vh;
+    width: 50%;
+    opacity: 0; 
+    position: absolute;
+    top: 25%;
+    z-index: -4;
 }
 .option{
     margin: auto;
@@ -242,7 +263,7 @@ height: 20%;
 }
 @keyframes toleft{
     0%{position: absolute; right: -400px;opacity: 0;backdrop-filter: blur(0px);}
-    100%{position: absolute; right: 0px;opacity: 1;backdrop-filter: blur(8px);}
+    100%{position: absolute; right: 0px;opacity: 1;backdrop-filter: blur(20px);}
 }
 
 .load{
@@ -253,4 +274,120 @@ height: 20%;
 @keyframes onload{
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+@media(max-width:1000px){
+    body{
+     overflow:scroll;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        padding: 0%;
+    }
+    .title{
+        width: 100%;
+        margin: 0%;
+        text-align: center;
+        font-size: 15px;
+        height: 10vh;
+    }
+    .username{
+        margin-top: 5%;
+        height: 10vh;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+    }
+    .btns{
+        width: 100%;
+        height: 15vh;
+        text-align: center;
+    }
+    .newnote , .logout , .mynote{
+        margin-top: 0%;
+        height: 60%;
+        font-size: 16px;
+    }
+    .note{
+        height: 80%;
+    }
+    .notes,.notecopy{
+        width: 100%;
+    }
+    .option{
+        display: flex;
+        flex-direction: row;
+    }
+    .savenote , .cancelnote{
+        width: 30%;
+    }
+    
+    .animate{
+    position: absolute;
+    animation-name: test;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal; 
+    }
+    @keyframes test{
+    0%{top : -500px ; opacity: 0; transform: scale(0.6);}
+    100%{top : 140% ; opacity: 1;  transform: scale(1);}
+    }
+
+    .down{
+        position: absolute;
+        animation-name: test2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+    }
+    @keyframes test2{
+        0%{top : 0px ; opacity: 1;transform: scale(0.9); }
+        70%{top : 50% ;transform: scale(0.6); }
+        100%{top : -200% ; opacity: 1;  transform: scale(0.6); }
+    }   
+    .choosefont{
+        opacity: 0;
+        text-align: center;
+        position: absolute;
+        left: 0px;
+        top: 35%;
+        width: 100%;
+        color:white;
+        display: flex;
+        height: 42vh;
+        flex-direction: column;
+    }
+    .toright{
+        animation: right 0.5s forwards;
+    }
+    @keyframes right{
+        0%{left: -400px;opacity: 0;backdrop-filter: blur(0px);}
+        100%{left: 0%; opacity: 1; backdrop-filter: blur(20px);}
+    }
+    .nameandcolor{
+        opacity: 0;
+        backdrop-filter: blur(8px);
+        text-align: center;
+        position: absolute;
+        right: 0px;
+        top: 80%;
+        width: 100%;
+        color: white;
+        display: flex;
+        height: 55vh;
+        background: transparent;
+        flex-direction: column;
+    }
+    .notename{
+        color: white;
+    }
+    .name{
+        color: white;
+    }
+    .Arial , .Pacifico , .Fantasy, .cursive , .OleoScript{
+        color: white;
+    }
+  
 }

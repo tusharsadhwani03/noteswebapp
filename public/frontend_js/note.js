@@ -1,5 +1,5 @@
 var newnote = document.querySelector('.newnote');
-var logot = document.querySelector('.logout');
+var logout = document.querySelector('.logout');
 var canvas = document.querySelector('.notes'); 
 var new_note = document.querySelector('.new_note');
 var note = document.querySelector('.note');
@@ -44,25 +44,23 @@ fix2() ;
 
 var width = canvas.width;
 var height = canvas.height;
-var posx ;
-var pretitleposx  = 0.15 * width;
-var predisposx =  0.05 * width;
-var pretitleposy  = 0.7*0.1*height;
-var predisposy = 0.3 * height;
-var posy ;
-var points = [];
-var dispoints = [];
-var linepoints = [];
-var titlekeyactive = false;
-var diskeyactive = false;
-posx = pretitleposx;
-posy = pretitleposy;
+var posx , posy;
+var pretitleposx , pretitleposy;
+var predisposx ,  predisposy;
+var points;
+var dispoints;
+var linepoints;
+var titlekeyactive ;
+var diskeyactive ;
 
 function drawbasiclayout()
 {
+    points = [];
+    linepoints = [];
+    dispoints = [];
     titlekeyactive = false;
     diskeyactive = false;
-    pretitleposx  = 0.15 * width;
+    pretitleposx  = 0.25 * width;
     predisposx =  0.05 * width;
     pretitleposy  = 0.7*0.1*height;
     predisposy = 0.3 * height;
@@ -71,10 +69,10 @@ function drawbasiclayout()
     ctx.fillRect(0,0,width,height);
     ctx.fillStyle = "#141e30";
     ctx.font = "30px Pacifico"; 
-    ctx.fillText("TITLE --",10,42);
+    ctx.fillText("TITLE --",4,0.7*0.1*height);
     ctx.beginPath();
-    ctx.moveTo(0,0.1*height);
-    ctx.lineTo(width,0.1*height);
+    ctx.moveTo(0,0.12*height);
+    ctx.lineTo(width,0.12*height);
     ctx.stroke();
     ctx.fillStyle='#141e30';
     ctx.font = "30px Oleo Script";
@@ -124,7 +122,7 @@ function handleevent(e)
         {
             if(titlekeyactive)
             {
-                if(posx > 0.15 * width)    
+                if(posx > 0.25 * width)    
                 {  
                     var diff = points.pop();
                     ctx.clearRect(posx-diff,0,diff+2,0.09*height);
@@ -196,13 +194,12 @@ function handleevent(e)
 }
 function handlecursor()
 { 
-     ctx.fillText('|',posx,posy);
-     console.log('a');
-     setTimeout(() => {
+    ctx.fillText('|',posx,posy);
+    console.log('a');
+    setTimeout(() => {
         console.log('b');
         ctx.clearRect(posx-1,posy - 40,50,0.09*height);
-     }, 4);
-    
+    }, 4);   
 }
 
 newnote.addEventListener('click',function(e){
@@ -257,7 +254,7 @@ mynote.addEventListener('click',function(e){
     location.assign('/mynotes');
 });
 
-logot.addEventListener('click',function(e){
+logout.addEventListener('click',function(e){
     e.preventDefault();
     location.assign('/logout');
 });
