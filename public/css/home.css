@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url('/images/pexels-pixabay-2097.jpg') no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-top: 2%;
+    text-align: center;
+    width: 100%;
+}
+.title h1{
+    font-size: 40px;
+    font-family: "Pacifico",cursive;
+    color: #141e30;
+}
+.type{
+    margin-top: 5%;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    height: 65%;
+    font-family: cursive;
+    color: #F2AA4CFF;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0%;
+}
+.load{
+    animation: onload 1s ease-in-out forwards;
+}
+.createnote{
+    min-width: 30%;
+    font-family: "Oleo Script";
+    font-size: 20px;
+    min-height: 40px;
+    background-color:#F2AA4CFF;
+    color:#141e30 ;
+}
+@keyframes onload{
+    0%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}
+
+@media(max-width:320px)
+{
+   .type{
+       font-size: 40px;
+   }
+}

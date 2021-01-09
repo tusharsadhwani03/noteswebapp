@@ -3,7 +3,7 @@
     const jwt  = require('jsonwebtoken');
     const User = require('./model/notes_model');
     
-/*  */
+/* Middleware for sending user details at each page if cokkie exist  */
     var authuser = (req,res,next) => {
         var token = req.cookies.jwt;
 
@@ -29,6 +29,7 @@
         }
     };
 
+/* Middleware for redirecting to notes page if user already logged in and trying to access login page */
     var logauth = (req,res,next) => {
         var token = req.cookies.jwt;
         if (token)
@@ -48,11 +49,13 @@
         }
     };
 
+/* Middleware for replacing cookie when logout */
     var delcookie = (req,res,next) => {
         res.cookie('jwt','',0);
         next();
     };
 
+/* Middleware for redirecting to log page if user not loged in and trying to access notes or mynotes page  */
     var logfirst = (req,res,next) => {
         var token = req.cookies.jwt;
         if(token)
@@ -74,4 +77,5 @@
         }
     }; 
 
-module.exports = {authuser , logauth , delcookie,logfirst} ;
+/* Exporting the middlewares */
+    module.exports = {authuser , logauth , delcookie,logfirst} ;

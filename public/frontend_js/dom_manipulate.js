@@ -1,4 +1,4 @@
-/**********************************Signup form*******************************************/
+/**********************************Signup form******************************************/
 
 /* Grabbing required dom elements */
     var sign_up = document.querySelector('.signup_form');
@@ -56,7 +56,7 @@
     
 });
 
-/***************************************Login form*******************************************/
+/**************************************Login form**************************************/
 
 /* Grabbing required dom elements */
     var log_in = document.querySelector('.login_form');
