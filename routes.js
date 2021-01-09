@@ -3,7 +3,6 @@
     var routes = express.Router();
     var bodyparser = require('body-parser');
     var User = require('./model/notes_model');
-    var secretcookie = require('./keys/keys');
     var jwt = require('jsonwebtoken');
     var {authuser , logauth ,delcookie,logfirst} = require('./middleware');
 
@@ -50,7 +49,7 @@
 /* Function createtoken() */
     function createtoken(id){
     // sign is used to create a jwt which require a payload , a secret and expire time
-        return jwt.sign({ id },secretcookie.cookiesecret.secret,{expiresIn : 1*1*60*60});   
+        return jwt.sign({ id },process.env.cookiesecret,{expiresIn : 1*1*60*60});   
     }
 
 

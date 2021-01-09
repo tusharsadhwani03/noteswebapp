@@ -1,15 +1,13 @@
 /* Import required modules */
-    var keys = require('./keys/keys');
     const jwt  = require('jsonwebtoken');
     const User = require('./model/notes_model');
     
 /* Middleware for sending user details at each page if cokkie exist  */
     var authuser = (req,res,next) => {
         var token = req.cookies.jwt;
-
         if (token)
         {
-            jwt.verify(token,keys.cookiesecret.secret, async (err, decodedToken) => {
+            jwt.verify(token,process.env.cookiesecret, async (err, decodedToken) => {
                 if (err)
                 {
                     res.locals.user = null;
