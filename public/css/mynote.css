@@ -59,7 +59,7 @@ body{
     display: flex;
     flex-direction: row;
 }
-.newnote , .logout , .mynote 
+.newnote , .logout , .mynote , .deleteacc
 {
     width: 25%;
     margin: auto;

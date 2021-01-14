@@ -82,6 +82,11 @@
             res.redirect('/');
         });
         
+    // 7. Privacy Get request
+        routes.get('/privacy',function(req,res){
+            res.render('privacy');
+        });
+        
 /* Handling Post requests */
     // 1. Post request for signup
         routes.post('/signup' , async (req,res) => {
